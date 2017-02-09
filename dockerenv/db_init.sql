@@ -1,0 +1,33 @@
+--
+-- Roles
+--
+
+CREATE USER testuser
+  WITH PASSWORD 'testpass';
+
+--
+-- Database creation
+--
+
+CREATE DATABASE testdb
+  WITH OWNER testuser;
+
+--
+-- Access rights
+--
+
+REVOKE ALL ON DATABASE testdb FROM PUBLIC;
+GRANT ALL ON DATABASE testdb TO testuser;
+
+\connect testdb
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+GRANT ALL ON SCHEMA public TO testuser;
+
+--  Tables creation
+--
+
+
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO testuser;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO testuser;
