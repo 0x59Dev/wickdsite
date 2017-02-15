@@ -4,12 +4,14 @@ from .models import Post
 
 
 def index(request):
+    latest_posts = Post.objects.order_by('posted_at')
+
     return HttpResponse("S I E M A ")
 
 #show post by requested slug
 def show_post(request, slug):
-    post = Post.objects.filter(slug=slug)
-    title = post[0].title
-    content = post[0].content
-    return HttpResponse("Post :  %s \n    Contewnt : %s" %(title, content) )
-
+  post = Post.objects.filter(slug=slug)
+  # print(post[0])
+  # title = post[0].title
+  # content = post[0].content
+  return HttpResponse(post)
