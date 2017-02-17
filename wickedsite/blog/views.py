@@ -11,7 +11,7 @@ def index(request):
 #show post by requested slug
 def show_post(request, slug):
   post = Post.objects.filter(slug=slug)
-  # print(post[0])
+  print(post[0].slug)
   # title = post[0].title
   # content = post[0].content
-  return HttpResponse(post)
+  return HttpResponse(slug)
