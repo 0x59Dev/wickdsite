@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Post
 
 
 def index(request):
     latest_posts = Post.objects.order_by('posted_at')[:5]
-    template = 'index.html'
+    template = 'blog/index.html'
     context = {'post_list': latest_posts}
     return render(request, template, context)
 
