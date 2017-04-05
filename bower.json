@@ -1,0 +1,25 @@
+{
+  "name": "wickdsite",
+  "homepage": "https://github.com/0x59Dev/wickdsite",
+  "authors": [
+    "0x59Dev <wjarochowicz91@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "keywords": [
+    "jquery",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}

@@ -3,6 +3,7 @@ from .models import Post
 
 
 def index(request):
+    print(request.method)
     latest_posts = Post.objects.order_by('posted_at')[:5]
     template = 'blog/index.html'
     context = {'post_list': latest_posts}

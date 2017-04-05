@@ -90,4 +90,8 @@ ENV/
 
 # Django migrations
 wickedsite/blog/migrations/
+wickedsite/templates/vendor/
 pyenv/
+/doc/
+doc/
+/doc
